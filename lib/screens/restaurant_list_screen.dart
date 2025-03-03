@@ -4,7 +4,7 @@ import '../providers/restaurant_provider.dart';
 import '../widgets/restaurant_item.dart';
 
 class RestaurantListScreen extends StatelessWidget {
-  const RestaurantListScreen({Key? key}) : super(key: key);
+  const RestaurantListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
