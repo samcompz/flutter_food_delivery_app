@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/menu_item.dart';
 
 class CartProvider with ChangeNotifier {
-  List<MenuItem> _items = [];
+  final List<MenuItem> _items = [];
 
   List<MenuItem> get items => _items;
 
