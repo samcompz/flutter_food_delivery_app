@@ -17,10 +17,10 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            const TextField(
               decoration: const InputDecoration(labelText: 'Email'),
             ),
-            TextField(
+            const TextField(
               decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
