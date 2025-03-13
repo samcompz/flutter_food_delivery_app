@@ -21,6 +21,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: const MyApp(),
+
     )
   );
 }
