@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/auth/login_or_register.dart';
+import 'package:food_delivery_app/screens/my_sliver_app.dart';
 import 'package:food_delivery_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,6 +11,7 @@ import 'providers/restaurant_provider.dart';
 import 'providers/cart_provider.dart';
 import 'screens/register.dart';
 import 'screens/home_page.dart';
+import 'screens/my_sliver_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

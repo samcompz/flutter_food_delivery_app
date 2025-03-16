@@ -9,7 +9,7 @@ import 'package:food_delivery_app/components/my_textfield.dart';
 class RegisterScreen extends StatefulWidget{
   @override
     _RegisterScreenState createState() => _RegisterScreenState();
-}
+  }
 
 
 class _RegisterScreenState extends State<RegisterScreen> {

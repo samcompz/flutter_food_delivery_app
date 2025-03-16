@@ -3,7 +3,6 @@ import 'package:food_delivery_app/screens/logIn.dart';
 import 'package:food_delivery_app/screens/register.dart';
 
 class LoginOrRegister extends StatefulWidget{
-
   @override
   State<LoginOrRegister> createState() {
     // TODO: implement createState
@@ -12,10 +11,8 @@ class LoginOrRegister extends StatefulWidget{
 }
 
 class _LoginOrRegisterState extends State<LoginOrRegister>{
-
   //initially, show login page
   bool showLoginPage = true;
-
 
   //toggle between login and register page
   void togglePages(){
