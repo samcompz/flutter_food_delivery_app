@@ -5,6 +5,8 @@ import '../providers/auth_provider.dart';
 
 
 class LoginScreen extends StatefulWidget{
+  const LoginScreen({super.key});
+
   @override
     _LoginScreenState createState() => _LoginScreenState();
 }
@@ -14,8 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
    
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  
-  
   
   @override
   Widget build(BuildContext context) {

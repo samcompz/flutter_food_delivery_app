@@ -3,8 +3,22 @@ import 'package:provider/provider.dart';
 import '../providers/restaurant_provider.dart';
 import '../widgets/restaurant_item.dart';
 
-class RestaurantListScreen extends StatelessWidget {
+class RestaurantListScreen extends StatefulWidget {
   const RestaurantListScreen({super.key});
+
+  @override
+  _RestaurantListScreenState createState() => _RestaurantListScreenState();
+}
+
+class _RestaurantListScreenState extends State<RestaurantListScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    // Fetch restaurants when the screen is created
+    Future.microtask(() =>
+        Provider.of<RestaurantProvider>(context, listen: false).fetchRestaurants());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +29,9 @@ class RestaurantListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Restaurants'),
       ),
-      body: ListView.builder(
+      body: restaurants.isEmpty
+          ? const Center(child: Text('No restaurants available'))
+          : ListView.builder(
         itemCount: restaurants.length,
         itemBuilder: (context, index) {
           final restaurant = restaurants[index];

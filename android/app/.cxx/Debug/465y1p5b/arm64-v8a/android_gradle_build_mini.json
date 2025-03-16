@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/rebounce/development/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/usr/bin/ninja",
+      "-C",
+      "/opt/lampp/htdocs/projects/food_delivery_app/android/app/.cxx/Debug/465y1p5b/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/usr/bin/ninja",
+    "-C",
+    "/opt/lampp/htdocs/projects/food_delivery_app/android/app/.cxx/Debug/465y1p5b/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
