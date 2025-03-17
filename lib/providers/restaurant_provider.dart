@@ -10,8 +10,14 @@ class RestaurantProvider with ChangeNotifier {
   List<Restaurant> get restaurants => _restaurants;  //getter method
 
   Future<void> fetchRestaurants() async {  //fetch restaurants
+  try{
     final snapshot = await _firestore.collection('restaurants').get();
     _restaurants = snapshot.docs.map((doc) => Restaurant.fromJson(doc.data())).toList();
     notifyListeners();
+
+  }catch(error){
+    print('Error fetching restaurants: $error');
   }
+  }
+  
 }
