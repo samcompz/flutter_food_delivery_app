@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart'; // Ensure this file is correctly generated
 
+import 'models/restaurant.dart';
 import 'providers/auth_provider.dart';
 import 'providers/restaurant_provider.dart';
 import 'providers/cart_provider.dart';
@@ -23,7 +24,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (context)=> ThemeProvider()),
         ChangeNotifierProvider(create: (_) => AuthProvider()),
-        ChangeNotifierProvider(create: (_) => RestaurantProvider()),
+        ChangeNotifierProvider(create: (_) => Restaurant()),
         ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: const MyApp(),
