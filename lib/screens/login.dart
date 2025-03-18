@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/screens/home_page.dart';
 import 'package:food_delivery_app/screens/restaurant_list_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
@@ -29,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             TextField(
-              controller: emailController, // capture emmail
+              controller: emailController, // capture email
               decoration: const InputDecoration(labelText: 'Email'),
             ),
             TextField(
@@ -46,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 //navigate to next screen here
                 Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const RestaurantListScreen()));
+                MaterialPageRoute(builder: (context) => const HomePage()));
               },
               child: const Text('Login'),
             ),
