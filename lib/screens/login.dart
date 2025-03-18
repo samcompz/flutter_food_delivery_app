@@ -9,39 +9,37 @@ class LoginScreen extends StatefulWidget{
     _LoginScreenState createState() => _LoginScreenState();
 }
 
+
 class _LoginScreenState extends State<LoginScreen> {
    
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
+  
+  
+  
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
+  
 
     return Scaffold(
-
       appBar: AppBar(
         title: const Text('Login'),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-
             TextField(
               controller: emailController, // capture emmail
               decoration: const InputDecoration(labelText: 'Email'),
             ),
-
             TextField(
               controller: passwordController, //capture password
               decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-
             const SizedBox(height: 20),
-
             ElevatedButton(
               onPressed: () {
                 String email = emailController.text.trim();
@@ -54,7 +52,6 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: const Text('Login'),
             ),
-
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -62,7 +59,6 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               child: const Text('Sign in with Google'),
             ),
-
           ],
         ),
       ),

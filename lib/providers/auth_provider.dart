@@ -65,7 +65,6 @@ final GoogleSignIn googleSignIn = GoogleSignIn(
     }
   }
 
-
 //logout
   Future<void> logout() async {
     await FirebaseAuth.instance.signOut();

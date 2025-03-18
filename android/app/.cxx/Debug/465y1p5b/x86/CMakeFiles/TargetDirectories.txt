@@ -1,0 +1,2 @@
+/opt/lampp/htdocs/projects/food_delivery_app/android/app/.cxx/Debug/465y1p5b/x86/CMakeFiles/edit_cache.dir
+/opt/lampp/htdocs/projects/food_delivery_app/android/app/.cxx/Debug/465y1p5b/x86/CMakeFiles/rebuild_cache.dir

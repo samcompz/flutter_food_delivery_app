@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/auth/login_or_register.dart';
+import 'package:food_delivery_app/screens/my_sliver_app.dart';
+import 'package:food_delivery_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart'; // Ensure this file is correctly generated
@@ -6,7 +9,9 @@ import 'firebase_options.dart'; // Ensure this file is correctly generated
 import 'providers/auth_provider.dart';
 import 'providers/restaurant_provider.dart';
 import 'providers/cart_provider.dart';
-import 'screens/login.dart';
+import 'screens/register.dart';
+import 'screens/home_page.dart';
+import 'screens/my_sliver_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +21,7 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (context)=> ThemeProvider()),
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => RestaurantProvider()),
         ChangeNotifierProvider(create: (_) => CartProvider()),
@@ -31,13 +37,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-   
-      title: 'Food Delivery App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       debugShowCheckedModeBanner: false, //remove the debug logo
-      home: LoginScreen(),
+      title: 'Food Delivery App',
+      theme: Provider.of<ThemeProvider>(context).themeData,
+      home: HomePage(),
     );
   }
 }

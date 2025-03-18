@@ -1,0 +1,1 @@
+/opt/lampp/htdocs/projects/food_delivery_app/build/app/intermediates/cxx/Debug/552t3h4g/obj/armeabi-v7a

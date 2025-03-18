@@ -14,9 +14,10 @@ class _RestaurantListScreenState extends State<RestaurantListScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration.zero, () {
-      Provider.of<RestaurantProvider>(context, listen: false).fetchRestaurants();
-    });
+
+    // Fetch restaurants when the screen is created
+    Future.microtask(() =>
+        Provider.of<RestaurantProvider>(context, listen: false).fetchRestaurants());
   }
 
   @override
@@ -25,16 +26,18 @@ class _RestaurantListScreenState extends State<RestaurantListScreen> {
     final restaurants = restaurantProvider.restaurants;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Restaurants')),
-      body: restaurantProvider.restaurants.isEmpty
-          ? const Center(child: CircularProgressIndicator())
+      appBar: AppBar(
+        title: const Text('Restaurants'),
+      ),
+      body: restaurants.isEmpty
+          ? const Center(child: Text('No restaurants available'))
           : ListView.builder(
-              itemCount: restaurants.length,
-              itemBuilder: (context, index) {
-                final restaurant = restaurants[index];
-                return RestaurantItem(restaurant: restaurant);
-              },
-            ),
+        itemCount: restaurants.length,
+        itemBuilder: (context, index) {
+          final restaurant = restaurants[index];
+          return RestaurantItem(restaurant: restaurant);
+        },
+      ),
     );
   }
 }
