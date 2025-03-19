@@ -9,12 +9,13 @@ import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:food_delivery_app/screens/my_sliver_app.dart';
 import 'package:provider/provider.dart';
 
-class HomePage extends StatefulWidget {
+import 'food_page.dart';
+
+class HomePage extends StatefulWidget  {
   const HomePage({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _HomePageState();
   }
 }
@@ -43,10 +44,10 @@ class _HomePageState extends State<HomePage>
   }
 
   // return list of foods in given category
-  List<Widget> getFoodInThisCategory(List<Food> fullName) {
+  List<Widget> getFoodInThisCategory(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
       //GET CATEGORY MENU
-      List<Food> fullMenu;
+      // List<Food> fullMenu = {};
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
 
       return ListView.builder(
@@ -57,7 +58,15 @@ class _HomePageState extends State<HomePage>
           final food = categoryMenu[index];
 
           //return food tile UI
-          return FoodTile(food: food, onTap: () {});
+          return FoodTile(
+              food: food,
+              onTap: ()=> Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context)=>FoodPage(food:food),
+                )
+              )
+          );
         },
       );
     }).toList();

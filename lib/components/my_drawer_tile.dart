@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/components/my_drawer.dart';
-
-
 
 class MyDrawerTile extends StatelessWidget{
   final String text;

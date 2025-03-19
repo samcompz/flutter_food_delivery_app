@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/models/food.dart';
+import 'package:intl/intl.dart';
 
 import 'cart_item.dart';
 
@@ -11,7 +12,7 @@ class Restaurant extends ChangeNotifier {
         name: "Classic Cheeseburger",
         description:
             "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-        imagePath: "lib/images/burgers/cheese_burger.jpeg",
+        imagePath: "lib/images/cheese_burger.jpeg",
         price: 0.99,
         category: FoodCategory.burgers,
         availableAddons: [
@@ -29,7 +30,7 @@ class Restaurant extends ChangeNotifier {
         name: "Pear Pie",
         description:
             "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-        imagePath: "lib/images/desserts/pearpie_desert.jpeg",
+        imagePath:"lib/images/cheese_burger.jpeg",
         price: 5.49,
         category: FoodCategory.desserts,
         availableAddons: [
@@ -47,7 +48,7 @@ class Restaurant extends ChangeNotifier {
         name: "Red Velvet Lava Cake",
         description:
             "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-        imagePath: "lib/images/burgers/cheese_burger.jpeg",
+        imagePath: "lib/images/cheese_burger.jpeg",
         price: 0.99,
         category: FoodCategory.burgers,
         availableAddons: [
@@ -65,7 +66,7 @@ class Restaurant extends ChangeNotifier {
         name: "Classic Cheeseburger",
         description:
             "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-        imagePath: "lib/images/burgers/cheese_burger.jpeg",
+        imagePath: "lib/images/cheese_burger.jpeg",
         price: 0.99,
         category: FoodCategory.burgers,
         availableAddons: [
@@ -111,8 +112,7 @@ O P E R A T I O N S
 
     //otherwise add a new cart item to the cart
     else {
-      _cart.add(CartItem(
-          food: food, selectedAddons: selectedAddons, quantity: quantity));
+      _cart.add(CartItem(food: food, selectedAddons: selectedAddons, quantity: cartItem!.quantity));
     }
   }
 
@@ -135,7 +135,7 @@ O P E R A T I O N S
 
     for (CartItem cartItem in _cart) {
       double itemTotal = cartItem.food.price;
-      for (Addon addon in CartItem.selectedAddons) {
+      for (Addon addon in cartItem.selectedAddons) {
         itemTotal += addon.price;
       }
       total += itemTotal * cartItem.quantity;
@@ -165,8 +165,48 @@ H E L P E R S
  */
 
 //generate a receipt
+String displayCartReceipt(){
+  final receipt = StringBuffer();
+  receipt.writeln("Here's your receipt");
+  receipt.writeln();
+
+  //format date to include up to seconds only
+  String formattedDate = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+
+  receipt.writeln(formattedDate);
+  receipt.writeln();
+  receipt.writeln("=====================");
+
+  for(final cartItem in _cart){
+    receipt.writeln(
+      "${cartItem.quantity} x ${cartItem.food.name} - ${_formatPrice(cartItem.food.price)}) ");
+      if(cartItem.selectedAddons.isNotEmpty){
+        receipt.writeln("   Add-ons: ${_formatAddons(cartItem.selectedAddons)}");
+    }
+      receipt.writeln();
+
+  }
+
+  receipt.writeln("---------------------");
+  receipt.writeln();
+  receipt.writeln("Total Items: ${getTotalItemCount()}");
+  receipt.writeln("Total Price: ${_formatPrice(getTotalPrice())}");
+
+
+  return receipt.toString();
+}
+
 
 //format double price value to money
+String _formatPrice(double price){
+  return "KShs. ${price.toStringAsFixed(2)}";
+}
+
 
 //format list of addons into a string summary
+String _formatAddons(List<Addon> addons){
+  return addons
+      .map((addon) => "${addon.name} (${_formatPrice(addon.price)})")
+      .join(", ");
+}
 }
