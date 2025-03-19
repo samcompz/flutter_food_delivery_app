@@ -19,17 +19,15 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform, // Ensure this is correct
   );
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context)=> ThemeProvider()),
-        ChangeNotifierProvider(create: (_) => AuthProvider()),
-        ChangeNotifierProvider(create: (_) => Restaurant()),
-        ChangeNotifierProvider(create: (_) => CartProvider()),
-      ],
-      child: const MyApp(),
-    )
-  );
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => ThemeProvider()),
+      ChangeNotifierProvider(create: (_) => AuthProvider()),
+      ChangeNotifierProvider(create: (_) => Restaurant()),
+      ChangeNotifierProvider(create: (_) => CartProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -45,4 +43,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
