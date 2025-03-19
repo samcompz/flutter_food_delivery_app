@@ -9,6 +9,8 @@ import 'home_page.dart';
 
 
 class LoginScreen extends StatefulWidget{
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -26,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
      Authentification
     */
     
-    //navigate to home ppage
+    //navigate to home page
     Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
   }
 
@@ -67,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             const SizedBox(height: 10,),
 
-            //password textfield
+            //password text field
             MyTextField(
               controller: passwordController, //capture password
               hintText: "Password",
@@ -103,7 +105,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ],
-
             )
           ],
         ),

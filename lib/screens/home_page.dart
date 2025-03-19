@@ -11,12 +11,11 @@ import 'package:provider/provider.dart';
 
 import 'food_page.dart';
 
-class HomePage extends StatefulWidget  {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    
     return _HomePageState();
   }
 }
@@ -60,13 +59,13 @@ class _HomePageState extends State<HomePage>
 
           //return food tile UI
           return FoodTile(
-              food: food,
-              onTap: ()=> Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context)=>FoodPage(food:food),
-                )
-              )
+            food: food,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FoodPage(food: food),
+              ),
+            ),
           );
         },
       );
@@ -76,39 +75,33 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const MyDrawer(),
-        body: NestedScrollView(
-            headerSliverBuilder: (context, innerBoxIsScrolled) =>
-            [
-              MySliverApp(
-                title: MyTabBar(tabController: _tabController),
-                child: Column(
-                  children: [
-                    Divider(
-                        indent: 25,
-                        endIndent: 25,
-                        color: Theme
-                            .of(context)
-                            .colorScheme
-                            .secondary
-                    ),
+      drawer: const MyDrawer(),
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          MySliverApp(
+            title: MyTabBar(tabController: _tabController),
+            child: Column(
+              children: [
+                Divider(
+                    indent: 25,
+                    endIndent: 25,
+                    color: Theme.of(context).colorScheme.secondary),
 
-                    //Location
-                    const MyCurrentLocation(),
+                //Location
+                const MyCurrentLocation(),
 
-                    //Description
-                    const MyDescriptionBox()
-                  ],
-                ),
-              )
-            ], body: Consumer<Restaurant>(
-          builder: (context, restaurant, child) =>
-              TabBarView(
-                  controller: _tabController,
-                  children: getFoodInThisCategory(restaurant.menu)
-              ),
-        )
-        )
+                //Description
+                const MyDescriptionBox()
+              ],
+            ),
+          )
+        ],
+        body: Consumer<Restaurant>(
+          builder: (context, restaurant, child) => TabBarView(
+              controller: _tabController,
+              children: getFoodInThisCategory(restaurant.menu)),
+        ),
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/screens/logIn.dart';
+import 'package:food_delivery_app/screens/login_page.dart.dart';
 import 'package:food_delivery_app/screens/register.dart';
 
 class LoginOrRegister extends StatefulWidget{

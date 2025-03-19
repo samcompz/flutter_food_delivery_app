@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:food_delivery_app/models/food.dart';
 
 class CartItem {
