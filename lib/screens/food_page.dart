@@ -22,17 +22,15 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-
-  void addToCart(Food food, Map<Addon, bool > selectedAddons){
-
+  void addToCart(Food food, Map<Addon, bool> selectedAddons) {
     //close the current food page to go back to menu
     Navigator.pop(context);
 
     //format the selected addons
     List<Addon> currentlySelectedAddons = [];
 
-    for(Addon addon in widget.food.availableAddons){
-      if(widget.selectedAddons[addon] == true){
+    for (Addon addon in widget.food.availableAddons) {
+      if (widget.selectedAddons[addon] == true) {
         currentlySelectedAddons.add(addon);
       }
     }
@@ -40,7 +38,6 @@ class _FoodPageState extends State<FoodPage> {
     //add to cart
     context.read<Restaurant>().addToCart(food, currentlySelectedAddons);
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +142,7 @@ class _FoodPageState extends State<FoodPage> {
                 //button -> add to cart
                 MyButton(
                   text: "Add To Cart",
-                  onTap:() => addToCart (widget.food, widget.selectedAddons),
+                  onTap: () => addToCart(widget.food, widget.selectedAddons),
                 ),
 
                 const SizedBox(
@@ -161,11 +158,9 @@ class _FoodPageState extends State<FoodPage> {
           child: Opacity(
             opacity: 0.6,
             child: Container(
-              margin: const EdgeInsets.only(
-                left: 25
-              ),
-            decoration:
-                  BoxDecoration(color: Theme.of(context).colorScheme.secondary,
+              margin: const EdgeInsets.only(left: 25),
+              decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
                   shape: BoxShape.circle),
               child: IconButton(
                   icon: const Icon(Icons.arrow_back_ios_new_rounded),

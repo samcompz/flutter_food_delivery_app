@@ -5,18 +5,16 @@ import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
 
-
-class RegisterScreen extends StatefulWidget{
+class RegisterScreen extends StatefulWidget {
   @override
-    _RegisterScreenState createState() => _RegisterScreenState();
-  }
-
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
 
 class _RegisterScreenState extends State<RegisterScreen> {
-   
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   //build
   @override
@@ -33,9 +31,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Column(
           children: [
             //logo
-            Icon(Icons.lock_open_rounded,
-            size: 100,
-            color: Theme.of(context).colorScheme.inversePrimary,
+            Icon(
+              Icons.lock_open_rounded,
+              size: 100,
+              color: Theme.of(context).colorScheme.inversePrimary,
             ),
 
             //message , app slogan
@@ -54,7 +53,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               obscureText: false,
             ),
 
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
 
             //password textfield
             MyTextField(
@@ -77,7 +78,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             //Register button
             MyButton(
                 text: "Register",
-                onTap: (){
+                onTap: () {
                   // sign in
                 }),
 
@@ -87,22 +88,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Member Already? Login Here",
+                Text(
+                  "Member Already? Login Here",
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
-                const SizedBox(width: 4,),
+                const SizedBox(
+                  width: 4,
+                ),
                 GestureDetector(
-                  onTap: (){},
-                  child: Text("Log In",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                    fontWeight: FontWeight.bold
-                  ),
+                  onTap: () {},
+                  child: Text(
+                    "Log In",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
-
             )
           ],
         ),

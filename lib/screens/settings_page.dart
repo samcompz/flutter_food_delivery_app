@@ -7,33 +7,30 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: Text("Settings"),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.background,
-        body: Column(
+      appBar: AppBar(
+        title: Text("Settings"),
+      ),
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body: Column(
+        children: [
+          Row(
             children: [
-                Row(
-                    children: [
-                        //dark mode
-                        Text("Dark Mode",
-                            style:TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.inversePrimary,
-                            )
-                        ),
+              //dark mode
+              Text("Dark Mode",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  )),
 
-
-                        //switch
-                        CupertinoSwitch(
-                            value: false,
-                            onChanged: (value){},
-                        ),
-                    ],
-                )
-          
+              //switch
+              CupertinoSwitch(
+                value: false,
+                onChanged: (value) {},
+              ),
             ],
-        ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -21,7 +21,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-
   //tab controller
   late TabController _tabController;
 
@@ -58,10 +57,7 @@ class _HomePageState extends State<HomePage>
           final food = categoryMenu[index];
 
           //return food tile UI
-          return FoodTile(
-              food: food,
-              onTap: (){}
-          );
+          return FoodTile(food: food, onTap: () {});
         },
       );
     }).toList();
@@ -72,37 +68,29 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
         drawer: const MyDrawer(),
         body: NestedScrollView(
-            headerSliverBuilder: (context, innerBoxIsScrolled) =>
-            [
-              MySliverApp(
-                title: MyTabBar(tabController: _tabController),
-                child: Column(
-                  children: [
-                    Divider(
-                        indent: 25,
-                        endIndent: 25,
-                        color: Theme
-                            .of(context)
-                            .colorScheme
-                            .secondary
+            headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                  MySliverApp(
+                    title: MyTabBar(tabController: _tabController),
+                    child: Column(
+                      children: [
+                        Divider(
+                            indent: 25,
+                            endIndent: 25,
+                            color: Theme.of(context).colorScheme.secondary),
+
+                        //Location
+                        const MyCurrentLocation(),
+
+                        //Description
+                        const MyDescriptionBox()
+                      ],
                     ),
-
-                    //Location
-                    const MyCurrentLocation(),
-
-                    //Description
-                    const MyDescriptionBox()
-                  ],
-                ),
-              )
-            ], body: Consumer<Restaurant>(
-          builder: (context, restaurant, child) =>
-              TabBarView(
+                  )
+                ],
+            body: Consumer<Restaurant>(
+              builder: (context, restaurant, child) => TabBarView(
                   controller: _tabController,
-                  children: getFoodInThisCategory(restaurant.menu)
-              ),
-        )
-        )
-    );
+                  children: getFoodInThisCategory(restaurant.menu)),
+            )));
   }
 }
