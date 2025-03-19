@@ -15,7 +15,6 @@ class MyCartTile extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-   
         return Consumer<Restaurant>(
             builder: (context, restaurant, child) => Container(
                 decoration: BoxDecoration(
