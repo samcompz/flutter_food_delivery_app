@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyDescriptionBox extends StatelessWidget{
+class MyDescriptionBox extends StatelessWidget {
   const MyDescriptionBox({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     var myPrimaryTextStyle = TextStyle(
       color: Theme.of(context).colorScheme.inversePrimary,
     );
@@ -16,33 +15,40 @@ class MyDescriptionBox extends StatelessWidget{
 
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color:Theme.of(context).colorScheme.secondary),
+        border: Border.all(color: Theme.of(context).colorScheme.secondary),
         borderRadius: BorderRadius.circular(8),
       ),
       padding: const EdgeInsets.all(25),
-      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 25),
+      margin: const EdgeInsets.only( bottom: 25),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //delivery fee
-          Expanded(
-            child: Column(
-              children: [
-                Text('KShs.0.99', style: myPrimaryTextStyle),
-                Text('Delivery fee', style: mySecondaryTextStyle,)
-              ],
-            ),
+
+          Column(
+            children: [
+              Text('KShs.0.99', style: myPrimaryTextStyle),
+              Text(
+                'Delivery fee',
+                style: mySecondaryTextStyle,
+              )
+            ],
           ),
 
           //delivery time
-          Expanded(
-            child: Column(
-              children: [
-                Text('15-30 min', style: myPrimaryTextStyle,),
-                Text('Delivery time', style: mySecondaryTextStyle,),
-              ],
-            ),
-          )
 
+          Column(
+            children: [
+              Text(
+                '15-30 min',
+                style: myPrimaryTextStyle,
+              ),
+              Text(
+                'Delivery time',
+                style: mySecondaryTextStyle,
+              ),
+            ],
+          ),
         ],
       ),
     );

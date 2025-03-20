@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/screens/login_page.dart.dart';
+import 'package:food_delivery_app/screens/login_page.dart';
 import 'package:food_delivery_app/screens/register.dart';
 
 class LoginOrRegister extends StatefulWidget{
+  const LoginOrRegister({super.key});
+
   @override
   State<LoginOrRegister> createState() {
-    // TODO: implement createState
     return _LoginOrRegisterState();
   }
 }
@@ -24,7 +25,7 @@ class _LoginOrRegisterState extends State<LoginOrRegister>{
   @override
   Widget build(BuildContext context) {
     if(showLoginPage){
-      return LoginScreen();
+      return const LoginScreen();
     }else{
       return RegisterScreen();
     }

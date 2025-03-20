@@ -6,7 +6,7 @@ import 'package:food_delivery_app/components/my_food_tile.dart';
 import 'package:food_delivery_app/components/my_tab_bar.dart';
 import 'package:food_delivery_app/models/food.dart';
 import 'package:food_delivery_app/models/restaurant.dart';
-import 'package:food_delivery_app/screens/my_sliver_app.dart';
+import 'package:food_delivery_app/components/my_sliver_app_bar.dart';
 import 'package:provider/provider.dart';
 
 import 'food_page.dart';

@@ -7,29 +7,30 @@ import 'package:food_delivery_app/components/my_textfield.dart';
 
 import 'home_page.dart';
 
-
-class LoginScreen extends StatefulWidget{
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-
 class _LoginScreenState extends State<LoginScreen> {
-
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-
   //login method
-  void logIn(){
+  void logIn() {
     /*
      Authentification
     */
-    
+
     //navigate to home page
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomePage(),
+      ),
+    );
   }
 
   @override
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: const Text('Login'),
       ),
@@ -46,7 +47,8 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             //logo
-            Icon(Icons.lock_open_rounded,
+            Icon(
+              Icons.lock_open_rounded,
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -62,12 +64,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
             //email textField
             MyTextField(
-              controller: emailController, // capture emmail
+              controller: emailController, // capture email
               hintText: "Email",
               obscureText: false,
             ),
 
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
 
             //password text field
             MyTextField(
@@ -79,10 +83,16 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 10),
 
             MyButton(
-                text: "Sign In",
-                onTap: (){
-                  // sign in
-                }),
+              text: "Sign In",
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ),
+                );
+              },
+            ),
 
             const SizedBox(height: 25),
 
@@ -90,18 +100,21 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Not a Member?",
+                Text(
+                  "Not a Member?",
                   style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
-                const SizedBox(width: 4,),
+                const SizedBox(
+                  width: 4,
+                ),
                 GestureDetector(
-                  onTap: (){},
-                  child: Text("Register now",
+                  onTap: () {},
+                  child: Text(
+                    "Register now",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.inversePrimary,
-                        fontWeight: FontWeight.bold
-                    ),
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ],

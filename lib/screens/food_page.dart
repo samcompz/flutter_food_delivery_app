@@ -11,7 +11,7 @@ class FoodPage extends StatefulWidget {
   FoodPage({super.key, required this.food}) {
     //initialise selected addons to be false
     for (Addon addon in food.availableAddons) {
-      selectedAddons[addon] = false;
+      selectedAddons[addon] = false; //nothing has been selected fom stert
     }
   }
 
@@ -47,7 +47,7 @@ class _FoodPageState extends State<FoodPage> {
         Scaffold(
           body: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //food image
                 Image.asset(widget.food.imagePath),
@@ -130,7 +130,9 @@ class _FoodPageState extends State<FoodPage> {
                                 ),
                                 value: widget.selectedAddons[addon],
                                 onChanged: (bool? value) {
-                                  widget.selectedAddons[addon] = value!;
+                                  setState(() {
+                                    widget.selectedAddons[addon] = value!;
+                                  });
                                 },
                               );
                             }),

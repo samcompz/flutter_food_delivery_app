@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/auth/login_or_register.dart';
 import 'package:food_delivery_app/screens/settings_page.dart';
 import 'my_drawer_tile.dart';
 
-class MyDrawer extends StatelessWidget{
+class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
           //app logo
@@ -42,8 +42,11 @@ class MyDrawer extends StatelessWidget{
             icon: Icons.settings,
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const SettingsPage(),
-              ),
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingsPage(),
+                ),
               );
             },
           ),
@@ -51,10 +54,15 @@ class MyDrawer extends StatelessWidget{
           //logout list tile
           MyDrawerTile(
             text: "L O G O U T",
-            icon: Icons.settings,
-            onTap: () {},
-          )
-
+            icon: Icons.logout,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginOrRegister(),
+                  ));
+            },
+          ),
 
           // logout list tile
         ],
