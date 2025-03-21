@@ -12,90 +12,99 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Classic Cheeseburger",
       description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
+          "A juicy beef patty with melted cheddar, crisp lettuce, fresh tomato, and a hint of onion.",
       imagePath: "lib/images/burgers/cheese_burger.jpeg",
       price: 599.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 99.00, name: "Extra Cheese"),
         Addon(price: 199.00, name: "Bacon"),
-        Addon(price: 899.00, name: "Avocado"),
         Addon(price: 299.00, name: "Egg"),
         Addon(price: 199.00, name: "Sausage"),
-        Addon(price: 399.00, name: "Tomato Pasta"),
-        Addon(price: 499.00, name: "meat Toast"),
+        Addon(price: 149.00, name: "Grilled Onions"),
+        Addon(price: 149.00, name: "Jalapeños"),
       ],
     ),
 
     Food(
-      name: "Classic Cheeseburger",
+      name: "Classic Hamburger",
       description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+          "A simple yet delicious hamburger with a juicy beef patty, lettuce, "
+          "tomato, onions, and pickles, served on a toasted sesame seed bun. "
+          "Comes with your choice of sauce.",
+      imagePath: "lib/images/burgers/classic_hamburger.jpeg",
       price: 499.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 99.00, name: "Extra Cheese Burger"),
-        Addon(price: 199.00, name: "Bacon"),
-        Addon(price: 899.00, name: "Avocado"),
-        Addon(price: 299.00, name: "Egg"),
-        Addon(price: 199.00, name: "Sausage"),
-        Addon(price: 399.00, name: "Tomato Pasta"),
-        Addon(price: 499.00, name: "meat Toast"),
+        Addon(price: 99.00, name: "Cheese"),
+        Addon(price: 149.00, name: "Bacon"),
+        Addon(price: 199.00, name: "Avocado"),
+        Addon(price: 129.00, name: "Fried Egg"),
+        Addon(price: 79.00, name: "Jalapeños"),
+        Addon(price: 99.00, name: "Grilled Onions"),
+        Addon(price: 50.00, name: "Extra Tomato"),
+        Addon(price: 50.00, name: "Extra Lettuce"),
+        Addon(price: 149.00, name: "Gluten-Free Bun"),
       ],
     ),
 
     Food(
-      name: "Classic Cheeseburger",
+      name: "Veggie Burger",
       description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/burgers/cheese_burger.jpeg",
-      price: 699.00,
-      category: FoodCategory.burgers,  //return burgers
+          "A delicious plant-based patty with fresh lettuce, tomato, onions, "
+          "and a hint of special sauce, served on a toasted whole wheat bun.",
+      imagePath: "lib/images/burgers/veggie_burger.png",
+      price: 549.00,
+      category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 99.00, name: "Extra Cheese Burger"),
-        Addon(price: 199.00, name: "Bacon"),
-        Addon(price: 899.00, name: "Avocado"),
-        Addon(price: 299.00, name: "Egg"),
-        Addon(price: 199.00, name: "Sausage"),
-        Addon(price: 399.00, name: "Tomato Pasta"),
-        Addon(price: 499.00, name: "meat Toast"),
+        Addon(price: 99.00, name: "Cheese"),
+        Addon(price: 149.00, name: "Avocado"),
+        Addon(price: 129.00, name: "Grilled Mushrooms"),
+        Addon(price: 99.00, name: "Extra Pickles"),
+        Addon(price: 79.00, name: "Jalapeños"),
+        Addon(price: 50.00, name: "Extra Lettuce"),
+        Addon(price: 50.00, name: "Extra Tomato"),
+        Addon(price: 149.00, name: "Gluten-Free Bun"),
       ],
     ),
 
     Food(
-      name: "Classic Cheeseburger",
+      name: "Crispy Chicken Burger",
       description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+          "A crunchy, golden-fried chicken fillet topped with fresh lettuce, "
+          "tomato, and creamy mayo, served on a toasted bun.",
+      imagePath: "lib/images/burgers/crispy_chicken_burger.png",
+      price: 649.00,
+      category: FoodCategory.burgers,
+      availableAddons: [
+        Addon(price: 99.00, name: "Extra Cheese"),
+        Addon(price: 149.00, name: "Bacon"),
+        Addon(price: 199.00, name: "Grilled Mushrooms"),
+        Addon(price: 99.00, name: "Extra Mayo"),
+        Addon(price: 79.00, name: "Spicy Jalapeños"),
+        Addon(price: 50.00, name: "Extra Lettuce"),
+        Addon(price: 50.00, name: "Extra Tomato"),
+        Addon(price: 149.00, name: "Gluten-Free Bun"),
+      ],
+    ),
+
+    Food(
+      name: "Fish Burger",
+      description:
+          "A crispy, golden-fried fish fillet with fresh lettuce, tartar sauce,"
+          " and a soft toasted bun.",
+      imagePath: "lib/images/burgers/fish_burger.jpeg",
       price: 599.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 99.00, name: "Extra Cheese Burger"),
-        Addon(price: 199.00, name: "Bacon"),
-        Addon(price: 899.00, name: "Avocado"),
-        Addon(price: 299.00, name: "Egg"),
-        Addon(price: 199.00, name: "Sausage"),
-        Addon(price: 399.00, name: "Tomato Pasta"),
-        Addon(price: 499.00, name: "meat Toast"),
-      ],
-    ),
-
-    Food(
-      name: "Classic Cheeseburger",
-      description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/burgers/cheese_burger.jpeg",
-      price: 499.00,
-      category: FoodCategory.burgers,
-      availableAddons: [
-        Addon(price: 99.00, name: "Extra Cheese Burger"),
-        Addon(price: 199.00, name: "Bacon"),
-        Addon(price: 899.00, name: "Avocado"),
-        Addon(price: 299.00, name: "Egg"),
-        Addon(price: 199.00, name: "Sausage"),
-        Addon(price: 399.00, name: "Tomato Pasta"),
-        Addon(price: 499.00, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese"),
+        Addon(price: 149.00, name: "Bacon"),
+        Addon(price: 129.00, name: "Grilled Onions"),
+        Addon(price: 99.00, name: "Extra Tartar Sauce"),
+        Addon(price: 79.00, name: "Spicy Jalapeños"),
+        Addon(price: 50.00, name: "Extra Lettuce"),
+        Addon(price: 50.00, name: "Extra Tomato"),
+        Addon(price: 149.00, name: "Whole Wheat Bun"),
       ],
     ),
 
@@ -360,7 +369,8 @@ class Restaurant extends ChangeNotifier {
 
     Food(
       name: "Eggless Butter Cookies",
-      description: "Crispy, buttery cookies made without eggs, perfect with tea or coffee.",
+      description:
+          "Crispy, buttery cookies made without eggs, perfect with tea or coffee.",
       imagePath: "lib/images/desserts/Eggless-Easy-Butter-Cookies.png",
       price: 849.00,
       category: FoodCategory.desserts,
@@ -403,7 +413,8 @@ class Restaurant extends ChangeNotifier {
 
     Food(
       name: "Minute Maid Drink",
-      description: "Refreshing Minute Maid fruit juice. Choose from Orange, Apple, or Mango.",
+      description:
+          "Refreshing Minute Maid fruit juice. Choose from Orange, Apple, or Mango.",
       imagePath: "lib/images/drinks/minute-maid-drink-by-pizza-inn-800x800.png",
       price: 249.00,
       category: FoodCategory.drinks,
@@ -417,7 +428,8 @@ class Restaurant extends ChangeNotifier {
 
     Food(
       name: "Coke Zero",
-      description: "The same refreshing Coca-Cola taste with zero sugar. Served chilled.",
+      description:
+          "The same refreshing Coca-Cola taste with zero sugar. Served chilled.",
       imagePath: "lib/images/drinks/Coke-Zero-500ml.png",
       price: 399.00,
       category: FoodCategory.drinks,
@@ -428,10 +440,10 @@ class Restaurant extends ChangeNotifier {
       ],
     ),
 
-
     Food(
       name: "Coke 2L",
-      description: "A large 2-liter bottle of Coca-Cola, perfect for sharing. Served chilled.",
+      description:
+          "A large 2-liter bottle of Coca-Cola, perfect for sharing. Served chilled.",
       imagePath: "lib/images/drinks/Coke-2L-800x800.png",
       price: 499.00,
       category: FoodCategory.drinks,
@@ -454,7 +466,7 @@ G E T T E R S
 O P E R A T I O N S
  */
   //user cart
-  final List<CartItem> _cart = [];  //_cart is a list storing cart items.
+  final List<CartItem> _cart = []; //_cart is a list storing cart items.
 
 //add to cart
   void addToCart(Food food, List<Addon> selectedAddons) {
@@ -487,40 +499,56 @@ O P E R A T I O N S
 
 //remove from cart
   void removeFromCart(CartItem cartItem) {
-    int cartIndex = _cart.indexOf(cartItem);  //Find the Item in the Cart, indexOf() == finds the index of the cartItem in _cart.
-    if (cartIndex != -1) {                    //If the item exists, it returns its index.,,, If the item does not exist, it returns -1
-      if (_cart[cartIndex].quantity > 1) {    //If quantity is greater than 1,
-        _cart[cartIndex].quantity--;          //If quantity is 1:
+    int cartIndex = _cart.indexOf(
+        cartItem); //Find the Item in the Cart, indexOf() == finds the index of the cartItem in _cart.
+    if (cartIndex != -1) {
+      //If the item exists, it returns its index.,,, If the item does not exist, it returns -1
+      if (_cart[cartIndex].quantity > 1) {
+        //If quantity is greater than 1,
+        _cart[cartIndex].quantity--; //If quantity is 1:
       } else {
-        _cart.removeAt(cartIndex);            //If quantity is 1: Remove item completely
+        _cart.removeAt(cartIndex); //If quantity is 1: Remove item completely
       }
-    }                                         //If cartIndex == -1, the item is not in the cart, so we do nothing.
-    notifyListeners();                        //method use in flutter's Provider package, It tells the UI to rebuild and reflect changes in the cart.
+    } //If cartIndex == -1, the item is not in the cart, so we do nothing.
+    notifyListeners(); //method use in flutter's Provider package, It tells the UI to rebuild and reflect changes in the cart.
   }
 
 //get total price of cart
   double getTotalPrice() {
-    double total = 0.0;                               //Creates a total variable to store the final cart total.
+    double total =
+        0.0; //Creates a total variable to store the final cart total.
 
-    for (CartItem cartItem in _cart) {               //Iterates over all items in _cart (a list of CartItem objects).
-      double itemTotal = cartItem.food.price;        //Extracts the base price of the food item.
-      for (Addon addon in cartItem.selectedAddons) {  //selectedAddons is a list of Addon objects
-        itemTotal += addon.price;                     //Adds the price of each add-on to itemTotal
+    for (CartItem cartItem in _cart) {
+      //Iterates over all items in _cart (a list of CartItem objects).
+      double itemTotal =
+          cartItem.food.price; //Extracts the base price of the food item.
+      for (Addon addon in cartItem.selectedAddons) {
+        //selectedAddons is a list of Addon objects
+        itemTotal += addon.price; //Adds the price of each add-on to itemTotal
       }
-      total += itemTotal * cartItem.quantity;         //Multiplies itemTotal by the quantity of that cart item/Adds this total to the overall total price
+      total += itemTotal *
+          cartItem
+              .quantity; //Multiplies itemTotal by the quantity of that cart item/Adds this total to the overall total price
     }
-    return total;                                     //Returns the final total price of all cart items.
+    return total; //Returns the final total price of all cart items.
   }
 
 //get total number of items in cart
   int getTotalItemCount() {
-    int totalItemCount = 0;                            ///Creates a variable totalItemCount to store the sum of all item quantities in the cart.
+    int totalItemCount = 0;
 
-    for (CartItem cartItem in _cart) {                 ///Iterates over all items in _cart (a list of CartItem objects).
-      totalItemCount += cartItem.quantity;             ///Extracts the quantity of each cartItem and adds it to totalItemCount.
+    ///Creates a variable totalItemCount to store the sum of all item quantities in the cart.
+
+    for (CartItem cartItem in _cart) {
+      ///Iterates over all items in _cart (a list of CartItem objects).
+      totalItemCount += cartItem.quantity;
+
+      ///Extracts the quantity of each cartItem and adds it to totalItemCount.
     }
 
-    return totalItemCount;                             ///Returns the total number of individual items in the cart.
+    return totalItemCount;
+
+    ///Returns the total number of individual items in the cart.
   }
 
 //clear cart
