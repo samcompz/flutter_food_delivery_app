@@ -13,17 +13,17 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Cheeseburger",
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 0.99,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 599.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger "),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -31,17 +31,17 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Cheeseburger",
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 0.99,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 499.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -49,17 +49,17 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Cheeseburger",
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 0.99,
-      category: FoodCategory.burgers,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 699.00,
+      category: FoodCategory.burgers,  //return burgers
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -67,17 +67,17 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Cheeseburger",
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 0.99,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 599.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -85,17 +85,17 @@ class Restaurant extends ChangeNotifier {
       name: "Classic Cheeseburger",
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 0.99,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 499.00,
       category: FoodCategory.burgers,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -110,13 +110,13 @@ class Restaurant extends ChangeNotifier {
       price: 500.00,
       category: FoodCategory.salads,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -125,16 +125,16 @@ class Restaurant extends ChangeNotifier {
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
       imagePath: "lib/images/salads/green-salad-1-580x803.jpg",
-      price: 0.99,
+      price: 399.00,
       category: FoodCategory.salads,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -146,13 +146,13 @@ class Restaurant extends ChangeNotifier {
       price: 189.99,
       category: FoodCategory.salads,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -164,16 +164,16 @@ class Restaurant extends ChangeNotifier {
           "for a salad to bring to a party that—this is critical—people actually want to eat, "
           "this strawberry spinach salad with poppy seed dressing and feta is the recipe for you!",
       imagePath: "lib/images/salads/Spinach-Strawberry-Salad.jpg",
-      price: 0.99,
+      price: 299.00,
       category: FoodCategory.salads,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -186,13 +186,13 @@ class Restaurant extends ChangeNotifier {
       price: 650.99,
       category: FoodCategory.salads,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -201,17 +201,17 @@ class Restaurant extends ChangeNotifier {
       name: "Pear Pie",
       description:
           "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 5.49,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 549.00,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -219,17 +219,17 @@ class Restaurant extends ChangeNotifier {
       name: "Pear Pie",
       description:
           "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 5.49,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 549.00,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -237,17 +237,17 @@ class Restaurant extends ChangeNotifier {
       name: "Pear Pie",
       description:
           "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 5.49,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 549.00,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -255,17 +255,17 @@ class Restaurant extends ChangeNotifier {
       name: "Pear Pie",
       description:
           "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 5.49,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 549.00,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -273,17 +273,17 @@ class Restaurant extends ChangeNotifier {
       name: "Pear Pie",
       description:
           "A tangy and sweet key peer pie with a rich, creamy filling and a crumbly graham cracker",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 5.49,
+      imagePath: "lib/images/burgers/cheese_burger.jpeg",
+      price: 549.00,
       category: FoodCategory.sides,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -293,16 +293,16 @@ class Restaurant extends ChangeNotifier {
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
       imagePath: "lib/images/desserts/red-velvet-lava-cake.png",
-      price: 0.99,
+      price: 990.00,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -311,16 +311,16 @@ class Restaurant extends ChangeNotifier {
       description:
           "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
       imagePath: "lib/images/desserts/PeanutButterPretzelPiewithChocolate.png",
-      price: 1000.00,
+      price: 999.00,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
@@ -329,141 +329,116 @@ class Restaurant extends ChangeNotifier {
       description: "Where chocolate dreams melt in your mouth!n",
       imagePath:
           "lib/images/desserts/chocolate-ice-cream-milk-frozen-dessert.png",
-      price: 1500.00,
+      price: 1499.00,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Cheese Burger"),
+        Addon(price: 199.00, name: "Bacon"),
+        Addon(price: 899.00, name: "Avocado"),
+        Addon(price: 299.00, name: "Egg"),
+        Addon(price: 199.00, name: "Sausage"),
+        Addon(price: 399.00, name: "Tomato Pasta"),
+        Addon(price: 499.00, name: "meat Toast"),
       ],
     ),
 
     Food(
       name: "Lemon Pudding Dessert",
-      description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
+      description: "A soft and tangy lemon pudding topped with whipped cream.",
       imagePath: "lib/images/desserts/Lemon-Pudding.png",
-      price: 0.99,
+      price: 899.00,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Extra Whipped Cream"),
+        Addon(price: 199.00, name: "Chocolate Syrup"),
+        Addon(price: 299.00, name: "Caramel Drizzle"),
+        Addon(price: 199.00, name: "Nuts"),
+        Addon(price: 399.00, name: "Berry Compote"),
+        Addon(price: 499.00, name: "Vanilla Ice Cream"),
       ],
     ),
 
     Food(
-      name: "Egg less Butter Cookies",
-      description:
-          "A juicy beef patty with melted chedder, lettuce, tomato and a hint of onion",
+      name: "Eggless Butter Cookies",
+      description: "Crispy, buttery cookies made without eggs, perfect with tea or coffee.",
       imagePath: "lib/images/desserts/Eggless-Easy-Butter-Cookies.png",
-      price: 850.00,
+      price: 849.00,
       category: FoodCategory.desserts,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 99.00, name: "Chocolate Chips"),
+        Addon(price: 199.00, name: "Almond Slices"),
+        Addon(price: 299.00, name: "Vanilla Essence"),
+        Addon(price: 399.00, name: "Cinnamon Powder"),
+        Addon(price: 499.00, name: "Caramel Drizzle"),
       ],
     ),
 
     //drinks
     Food(
-      name: "500ml PET",
-      description: "A 500ML Bottle of Coke, Sprite, or Fanta. Served Cold.",
+      name: "500ml PET Soda",
+      description: "A 500ML bottle of Coke, Sprite, or Fanta. Served chilled.",
       imagePath: "lib/images/drinks/500ml_Coke-PET-800x800.png",
-      price: 350.00,
+      price: 349.00,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 49.00, name: "Extra Ice"),
+        Addon(price: 99.00, name: "Lemon Slice"),
+        Addon(price: 149.00, name: "Mint Leaves"),
+        Addon(price: 199.00, name: "Flavored Syrup"),
       ],
     ),
 
     Food(
       name: "500ml Water",
-      description: "Half Litre of pure drinking Water - Dasani. served Cold",
+      description: "Half a liter of pure drinking water - Dasani. Served cold.",
       imagePath: "lib/images/drinks/coca-cola-water-dasani.png",
-      price: 150.00,
+      price: 149.00,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 49.00, name: "Extra Ice"),
+        Addon(price: 99.00, name: "Lemon Slice"),
+        Addon(price: 149.00, name: "Mint Leaves"),
       ],
     ),
 
     Food(
       name: "Minute Maid Drink",
-      description: "Minute Maid by PizzaInn. Fruit juice of choice.",
+      description: "Refreshing Minute Maid fruit juice. Choose from Orange, Apple, or Mango.",
       imagePath: "lib/images/drinks/minute-maid-drink-by-pizza-inn-800x800.png",
-      price: 150.00,
+      price: 249.00,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 49.00, name: "Extra Ice"),
+        Addon(price: 99.00, name: "Lemon Slice"),
+        Addon(price: 149.00, name: "Mint Leaves"),
+        Addon(price: 199.00, name: "Honey Drizzle"),
       ],
     ),
 
     Food(
       name: "Coke Zero",
-      description: "Enjoy the refreshment of Coca‑Cola with zero sugar.",
+      description: "The same refreshing Coca-Cola taste with zero sugar. Served chilled.",
       imagePath: "lib/images/drinks/Coke-Zero-500ml.png",
-      price: 250.00,
+      price: 399.00,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 49.00, name: "Extra Ice"),
+        Addon(price: 99.00, name: "Lemon Slice"),
+        Addon(price: 149.00, name: "Mint Leaves"),
       ],
     ),
 
+
     Food(
       name: "Coke 2L",
-      description:
-          "Whether it’s a Party-size Coca-Cola bottle, a perfectly sized mini, "
-          "an ice-cold Diet Coke, or a crisp Coca-Cola Zero Sugar can, "
-          "there's always a refreshing way to enjoy your favorite drink.",
-      imagePath: "lib/images/cheese_burger.jpeg",
-      price: 500.00,
+      description: "A large 2-liter bottle of Coca-Cola, perfect for sharing. Served chilled.",
+      imagePath: "lib/images/drinks/Coke-2L-800x800.png",
+      price: 499.00,
       category: FoodCategory.drinks,
       availableAddons: [
-        Addon(price: 0.99, name: "Extra Cheese Burger"),
-        Addon(price: 1.99, name: "Bacon"),
-        Addon(price: 8.99, name: "Avocado"),
-        Addon(price: 2.99, name: "Egg"),
-        Addon(price: 1.99, name: "Sausage"),
-        Addon(price: 3.99, name: "Tomato Pasta"),
-        Addon(price: 4.99, name: "meat Toast"),
+        Addon(price: 49.00, name: "Extra Ice"),
+        Addon(price: 99.00, name: "Lemon Slice"),
+        Addon(price: 149.00, name: "Mint Leaves"),
       ],
     ),
   ];
@@ -479,7 +454,7 @@ G E T T E R S
 O P E R A T I O N S
  */
   //user cart
-  final List<CartItem> _cart = [];
+  final List<CartItem> _cart = [];  //_cart is a list storing cart items.
 
 //add to cart
   void addToCart(Food food, List<Addon> selectedAddons) {
@@ -512,40 +487,40 @@ O P E R A T I O N S
 
 //remove from cart
   void removeFromCart(CartItem cartItem) {
-    int cartIndex = _cart.indexOf(cartItem);
-    if (cartIndex != -1) {
-      if (_cart[cartIndex].quantity > 1) {
-        _cart[cartIndex].quantity--;
+    int cartIndex = _cart.indexOf(cartItem);  //Find the Item in the Cart, indexOf() == finds the index of the cartItem in _cart.
+    if (cartIndex != -1) {                    //If the item exists, it returns its index.,,, If the item does not exist, it returns -1
+      if (_cart[cartIndex].quantity > 1) {    //If quantity is greater than 1,
+        _cart[cartIndex].quantity--;          //If quantity is 1:
       } else {
-        _cart.removeAt(cartIndex);
+        _cart.removeAt(cartIndex);            //If quantity is 1: Remove item completely
       }
-    }
-    notifyListeners();
+    }                                         //If cartIndex == -1, the item is not in the cart, so we do nothing.
+    notifyListeners();                        //method use in flutter's Provider package, It tells the UI to rebuild and reflect changes in the cart.
   }
 
 //get total price of cart
   double getTotalPrice() {
-    double total = 0.0;
+    double total = 0.0;                               //Creates a total variable to store the final cart total.
 
-    for (CartItem cartItem in _cart) {
-      double itemTotal = cartItem.food.price;
-      for (Addon addon in cartItem.selectedAddons) {
-        itemTotal += addon.price;
+    for (CartItem cartItem in _cart) {               //Iterates over all items in _cart (a list of CartItem objects).
+      double itemTotal = cartItem.food.price;        //Extracts the base price of the food item.
+      for (Addon addon in cartItem.selectedAddons) {  //selectedAddons is a list of Addon objects
+        itemTotal += addon.price;                     //Adds the price of each add-on to itemTotal
       }
-      total += itemTotal * cartItem.quantity;
+      total += itemTotal * cartItem.quantity;         //Multiplies itemTotal by the quantity of that cart item/Adds this total to the overall total price
     }
-    return total;
+    return total;                                     //Returns the final total price of all cart items.
   }
 
 //get total number of items in cart
   int getTotalItemCount() {
-    int totalItemCount = 0;
+    int totalItemCount = 0;                            ///Creates a variable totalItemCount to store the sum of all item quantities in the cart.
 
-    for (CartItem cartItem in _cart) {
-      totalItemCount += cartItem.quantity;
+    for (CartItem cartItem in _cart) {                 ///Iterates over all items in _cart (a list of CartItem objects).
+      totalItemCount += cartItem.quantity;             ///Extracts the quantity of each cartItem and adds it to totalItemCount.
     }
 
-    return totalItemCount;
+    return totalItemCount;                             ///Returns the total number of individual items in the cart.
   }
 
 //clear cart

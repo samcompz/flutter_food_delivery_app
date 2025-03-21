@@ -1,12 +1,14 @@
 //food model
 class Food {
-  final String name;
-  final String description;
-  final String imagePath;
-  final double price;
-  final FoodCategory category;
-  List<Addon> availableAddons;
+  final String name;          //name of the food
+  final String description;   //description of the food
+  final String imagePath;     // an image of the food
+  final double price;         //the price of the food
+  final FoodCategory category; //category under which the food falls in
+  List<Addon> availableAddons; //the available addons
 
+
+  //constructor
   Food({
     required this.name,
     required this.description,

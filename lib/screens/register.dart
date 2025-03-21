@@ -77,10 +77,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
             //Register button
             MyButton(
-                text: "Register",
-                onTap: () {
-                  // sign in
-                }),
+              text: "Register",
+              onTap: () {
+                // sign in
+              },
+            ),
 
             const SizedBox(height: 25),
 
