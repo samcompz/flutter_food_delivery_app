@@ -5,13 +5,14 @@ import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:provider/provider.dart';
 
 class FoodPage extends StatefulWidget {
-  final Food food;
-  final Map<Addon, bool> selectedAddons = {};
+  final Food food;                               //create a variable food
+  final Map<Addon, bool> selectedAddons = {};    //a map of foo
 
+  //constructor
   FoodPage({super.key, required this.food}) {
     //initialise selected addons to be false
     for (Addon addon in food.availableAddons) {
-      selectedAddons[addon] = false; //nothing has been selected fom stert
+      selectedAddons[addon] = false; //nothing has been selected fom start
     }
   }
 

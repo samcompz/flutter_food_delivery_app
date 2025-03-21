@@ -47,8 +47,9 @@ class MyCurrentLocation extends StatelessWidget {
                 Text(
                   "6901 Mombasa Kenya",
                   style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                      fontWeight: FontWeight.bold),
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
 
                 //dropdown menu

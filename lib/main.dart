@@ -8,8 +8,6 @@ import 'firebase_options.dart'; // Ensure this file is correctly generated
 import 'models/restaurant.dart';
 import 'providers/auth_provider.dart';
 import 'providers/cart_provider.dart';
-import 'screens/home_page.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

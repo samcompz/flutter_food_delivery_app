@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
-import 'package:food_delivery_app/screens/restaurant_list_screen.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
 
 class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
+
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
 }
@@ -77,10 +78,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
             //Register button
             MyButton(
-                text: "Register",
-                onTap: () {
-                  // sign in
-                }),
+              text: "Register",
+              onTap: () {
+                // sign in
+              },
+            ),
 
             const SizedBox(height: 25),
 

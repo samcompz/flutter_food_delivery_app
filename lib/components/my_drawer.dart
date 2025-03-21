@@ -36,7 +36,7 @@ class MyDrawer extends StatelessWidget {
             onTap: () => Navigator.pop(context),
           ),
 
-          //setings
+          //settings
           MyDrawerTile(
             text: "S E T T I N G S",
             icon: Icons.settings,
@@ -51,16 +51,32 @@ class MyDrawer extends StatelessWidget {
             },
           ),
 
+          //user accounts
+          MyDrawerTile(
+            text: "A C C O U N T S",
+            icon: Icons.person,
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginOrRegister(),
+                ),
+              );
+            },
+          ),
+
           //logout list tile
           MyDrawerTile(
             text: "L O G O U T",
             icon: Icons.logout,
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginOrRegister(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginOrRegister(),
+                ),
+              );
             },
           ),
 

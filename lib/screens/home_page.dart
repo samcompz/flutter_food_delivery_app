@@ -11,19 +11,21 @@ import 'package:provider/provider.dart';
 
 import 'food_page.dart';
 
+//the Home of the application
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key}); //constructor
 
   @override
   State<StatefulWidget> createState() {
-    return _HomePageState();
+    return _HomePageState();  //return the state of the homepage everytime it detects  a change
   }
 }
 
+//the implementation of HomePage
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   //tab controller
-  late TabController _tabController;
+  late TabController _tabController;  //Tabs that hold the different meals/Food categories
 
   @override
   void initState() {
@@ -75,14 +77,14 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MyDrawer(),
-      body: NestedScrollView(
+      drawer: const MyDrawer(),  //drawer for shortcuts e.g settings, logout, user accounts etc
+      body: NestedScrollView(  //the body is  a scrollview.
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          MySliverApp(
+          MySliverApp(  //more research necessary
             title: MyTabBar(tabController: _tabController),
             child: Column(
               children: [
-                Divider(
+                Divider(  //divider line
                     indent: 25,
                     endIndent: 25,
                     color: Theme.of(context).colorScheme.secondary),
@@ -91,15 +93,18 @@ class _HomePageState extends State<HomePage>
                 const MyCurrentLocation(),
 
                 //Description
-                const MyDescriptionBox()
+                const MyDescriptionBox(),
               ],
             ),
-          )
+          ),
         ],
+
+        //body - a consumer with list of all available food grouped into tabs
         body: Consumer<Restaurant>(
           builder: (context, restaurant, child) => TabBarView(
-              controller: _tabController,
-              children: getFoodInThisCategory(restaurant.menu)),
+            controller: _tabController,
+            children: getFoodInThisCategory(restaurant.menu),
+          ),
         ),
       ),
     );

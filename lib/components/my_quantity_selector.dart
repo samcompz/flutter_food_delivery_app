@@ -1,69 +1,64 @@
-
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/food.dart';
 
 class QuantitySelector extends StatelessWidget {
+  final int quantity;
+  final Food food;
+  final VoidCallback onIncrement;
+  final VoidCallback onDecrement;
 
-    final int quantity;
-    final Food food;
-    final VoidCallback onIncreament;
-    final VoidCallback onDecreament;
+  const QuantitySelector({
+    super.key,
+    required this.quantity,
+    required this.food,
+    required this.onDecrement,
+    required this.onIncrement,
+  });
 
-    const QuantitySelector({
-        super.key,
-        required this.quantity,
-        required this.food,
-        required this.onDecreament,
-        required this.onIncreament,
-
-    });
-
-    @override
-    Widget build(BuildContext context) {
-        return Container(
-            decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
-                borderRadius: BorderRadius.circular(50),
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surface,
+        borderRadius: BorderRadius.circular(50),
+      ),
+      padding: const EdgeInsets.all(8),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          //increase button
+          GestureDetector(
+            onTap: onDecrement,
+            child: Icon(
+              Icons.remove,
+              size: 20,
+              color: Theme.of(context).colorScheme.primary,
             ),
-            padding: const EdgeInsets.all(8),
-            child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
+          ),
 
-                    //increase button
-                    GestureDetector(
-                        onTap: onDecreament,
-                        child: Icon(Icons.remove,
-                            size: 20,
-                            color: Theme.of(context).colorScheme.primary,),
-                    ),
-
-                    //quantity count
-                    Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: SizedBox(
-                            width: 20,
-                            child: Center(
-                                child: Text(
-                                    quantity.toString()
-                                ),
-                            ),
-                        ),
-                    ),
-
-                    //increase button
-                    GestureDetector(
-                        onTap: onDecreament,
-                        child: Icon(Icons.remove,
-                            size: 20,
-                            color: Theme.of(context).colorScheme.primary,),
-                    ),
-
-                ],
+          //quantity count
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: SizedBox(
+              width: 20,
+              child: Center(
+                child: Text(quantity.toString()),
+              ),
             ),
-        );
-    }
+          ),
+
+          //increase button
+          GestureDetector(
+            onTap: onDecrement,
+            child: Icon(
+              Icons.add,
+              size: 20,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

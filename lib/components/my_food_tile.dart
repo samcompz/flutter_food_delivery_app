@@ -19,19 +19,20 @@ class FoodTile extends StatelessWidget {
               children: [
                 //text food details
                 Expanded(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(food.name),
-                    Text(
-                      'KShs${food.price.toString()}',
-                      style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary),
-                    ),
-                    //used interpolation instead of string concatenation
-                    Text(food.description),
-                  ],
-                )),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(food.name),
+                      Text(
+                        'KShs. ${food.price.toString()}',
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary),
+                      ),
+                      //used interpolation instead of string concatenation
+                      Text(food.description),
+                    ],
+                  ),
+                ),
 
                 const SizedBox(
                   width: 15,

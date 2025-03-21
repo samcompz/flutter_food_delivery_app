@@ -21,7 +21,7 @@ class MySliverApp extends StatelessWidget {
         //cart button
         IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart))
       ],
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: const Text("Sunset Dinner"),
       flexibleSpace: FlexibleSpaceBar(
@@ -37,3 +37,5 @@ class MySliverApp extends StatelessWidget {
     );
   }
 }
+
+//unless the Lord builds the city, those who do so labour in vain
