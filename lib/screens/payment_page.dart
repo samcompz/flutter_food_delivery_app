@@ -26,13 +26,13 @@ class _PaymentPageState extends State<PaymentPage> {
 
 
   //when user taps pay now, do the following, process payment
-  void userTappedPay() {
+   userTappedPay() {
     if(formKey.currentState!.validate()){
       //only show dialog if form is valid
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text("Confirm payment"),
+            title: const Text("Confirm payment"),
             content: SingleChildScrollView(
               child: ListBody(
                 children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/auth/login_or_register.dart';
 import 'package:food_delivery_app/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -7,8 +8,6 @@ import 'firebase_options.dart'; // Ensure this file is correctly generated
 import 'models/restaurant.dart';
 import 'providers/auth_provider.dart';
 import 'providers/cart_provider.dart';
-import 'screens/home_page.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, //remove the debug logo
       title: 'Food Delivery App',
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: HomePage(),
+      home: const LoginOrRegister(),
     );
   }
 }
