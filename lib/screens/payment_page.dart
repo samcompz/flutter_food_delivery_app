@@ -26,7 +26,7 @@ class _PaymentPageState extends State<PaymentPage> {
 
 
   //when user taps pay now, do the following, process payment
-  void userTappedPay() {
+  userTappedPay() {
     if(formKey.currentState!.validate()){
       //only show dialog if form is valid
       showDialog(
@@ -70,7 +70,7 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
