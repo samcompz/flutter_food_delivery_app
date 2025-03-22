@@ -22,7 +22,7 @@ class MyCartTile extends StatelessWidget {
         child: Column(                                                              //Holds all the content of the cart item, including the image, name, price, and quantity selector.
           children: [
             Padding(                                                               //The Padding adds spacing inside the container.
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(2.0),
               child: Row(                                                         //The Row arranges the food image, name/price, and quantity selector horizontally.
                 children: [
                   //food image
