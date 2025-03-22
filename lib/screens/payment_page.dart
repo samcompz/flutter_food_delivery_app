@@ -11,7 +11,7 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   String cardNumber = '';
 
@@ -25,7 +25,7 @@ class _PaymentPageState extends State<PaymentPage> {
 
   //when user taps pay now, do the following, process payment
   userTappedPay() {
-    if (formKey.currentState!.validate()) {
+    if (formKey.currentState?.validate() ?? false) {
       //only show dialog if form is valid
       showDialog(
         context: context,
@@ -45,7 +45,7 @@ class _PaymentPageState extends State<PaymentPage> {
             // cancel button
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("Can"),
+              child: const Text("Cancel"),
             ),
 
             //yes button
@@ -54,7 +54,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DeliveryProgressPage())),
-              child: const Text("Can"),
+              child: const Text("Proceed?"),
             ),
           ],
         ),
@@ -65,7 +65,7 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -106,6 +106,8 @@ class _PaymentPageState extends State<PaymentPage> {
             text: "Pay Now",
             onTap: userTappedPay(),
           ),
+
+          const SizedBox(height: 25),
         ],
       ),
     );

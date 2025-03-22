@@ -23,7 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: const Text('Register'),
       ),
@@ -58,7 +58,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 10,
             ),
 
-            //password textfield
+            //password Text Field
             MyTextField(
               controller: passwordController, //capture password
               hintText: "Password",
@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
             const SizedBox(height: 10),
 
-            //confirm password textfield
+            //confirm password Text Field
             MyTextField(
               controller: confirmPasswordController, //capture password
               hintText: "confirm Password",

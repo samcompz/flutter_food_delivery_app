@@ -7,7 +7,6 @@ class Food {
   final FoodCategory category; //category under which the food falls in
   List<Addon> availableAddons; //the available addons
 
-
   //constructor
   Food({
     required this.name,
