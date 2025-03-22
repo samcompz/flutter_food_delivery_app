@@ -5,8 +5,8 @@ import 'package:food_delivery_app/models/restaurant.dart';
 import 'package:provider/provider.dart';
 
 class FoodPage extends StatefulWidget {
-  final Food food;                               //create a variable food
-  final Map<Addon, bool> selectedAddons = {};    //a map of foo
+  final Food food; //create a variable food
+  final Map<Addon, bool> selectedAddons = {}; //a map of foo
 
   //constructor
   FoodPage({super.key, required this.food}) {
@@ -23,7 +23,7 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  void addToCart(Food food, Map<Addon, bool> selectedAddons) {
+  void addToCart(Food food, Map<Addon, bool> selectedAddons, {int quantity = 1}) {
     //close the current food page to go back to menu
     Navigator.pop(context);
 
@@ -37,7 +37,9 @@ class _FoodPageState extends State<FoodPage> {
     }
 
     //add to cart
-    context.read<Restaurant>().addToCart(food, currentlySelectedAddons);
+    if (context.mounted) {
+      context.read<Restaurant>().addToCart(food, currentlySelectedAddons, quantity: quantity);
+    }
   }
 
   @override

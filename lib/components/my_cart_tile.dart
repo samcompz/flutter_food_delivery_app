@@ -12,23 +12,24 @@ class MyCartTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Restaurant>(
-      builder: (context, restaurant, child) => Container(
+    return Consumer<Restaurant>(                                                  /*Listens for changes in the Restaurant provider and rebuilds the widget whenever the restaurant data changes.*/
+      builder: (context, restaurant, child) => Container(                         //Passes the restaurant object to the builder function.
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.secondary,
-            borderRadius: BorderRadius.circular(8)),
+          color: Theme.of(context).colorScheme.secondary,
+          borderRadius: BorderRadius.circular(8),
+        ),
         margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-        child: Column(
+        child: Column(                                                              //Holds all the content of the cart item, including the image, name, price, and quantity selector.
           children: [
-            Padding(
+            Padding(                                                               //The Padding adds spacing inside the container.
               padding: const EdgeInsets.all(8.0),
-              child: Row(
+              child: Row(                                                         //The Row arranges the food image, name/price, and quantity selector horizontally.
                 children: [
                   //food image
-                  ClipRRect(
+                  ClipRRect(                                                        //Displays the food image with rounded corners.
                     borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
-                      cartItem.food.imagePath,
+                      cartItem.food.imagePath,                                      //image is loaded from the asset path stored in cartItem.food.imagePath.
                       height: 100,
                       width: 100,
                     ),
@@ -37,15 +38,15 @@ class MyCartTile extends StatelessWidget {
                   //name and price
                   Column(
                     children: [
-                      //food name
+                      //displays the food name
                       Text(cartItem.food.name),
 
-                      //food price
+                      //displays the food price, formatted as KShs. 99.99
                       Text('KShs. ${cartItem.food.price}')
                     ],
                   ),
 
-                  //increment or decrement quantity
+                  //increment or decrement quantity using Quantity selector widget
                   QuantitySelector(
                     quantity: cartItem.quantity,
                     food: cartItem.food,
@@ -54,7 +55,7 @@ class MyCartTile extends StatelessWidget {
                     },
                     onIncrement: () {
                       restaurant.addToCart(
-                          cartItem.food, cartItem.selectedAddons);
+                          cartItem.food, cartItem.selectedAddons, quantity: cartItem.quantity);
                     },
                   )
                 ],

@@ -469,33 +469,65 @@ O P E R A T I O N S
   final List<CartItem> _cart = []; //_cart is a list storing cart items.
 
 //add to cart
-  void addToCart(Food food, List<Addon> selectedAddons) {
-    //see if there is a cart item already with the same food and addons
-    CartItem? cartItem = _cart.firstWhereOrNull((item) {
+  /**
+   *   void addToCart(Food food, List<Addon> selectedAddons, {required int quantity}) {
+      //see if there is a cart item already with the same food and addons
+      CartItem? cartItem = _cart.firstWhereOrNull((item) {
       bool isSameFood = item.food == food;
 
       //check if the list of selected addons are the same
       bool isSameAddons =
-          const ListEquality().equals(item.selectedAddons, selectedAddons);
+      const ListEquality().equals(item.selectedAddons, selectedAddons);
+      return isSameFood && isSameAddons;
+      });
+
+      //if item exists increase its quantity
+      if (cartItem != null) {
+      cartItem.quantity += quantity;
+      }
+
+      //otherwise add a new cart item to the cart
+      else {
+      _cart.add(
+      CartItem(
+      food: food,
+      selectedAddons: selectedAddons,
+      quantity: cartItem!.quantity),
+      );
+      }
+      notifyListeners();
+      }
+   */
+
+  void addToCart(Food food, List<Addon> selectedAddons, {required int quantity}) {
+    // See if there is a cart item already with the same food and addons
+    CartItem? cartItem = _cart.firstWhereOrNull((item) {
+      bool isSameFood = item.food == food;
+
+      // Check if the list of selected addons are the same
+      bool isSameAddons =
+      const ListEquality().equals(item.selectedAddons, selectedAddons);
       return isSameFood && isSameAddons;
     });
 
-    //if item exists increase its quantity
     if (cartItem != null) {
-      cartItem.quantity++;
-    }
-
-    //otherwise add a new cart item to the cart
-    else {
+      // If item exists, increase its quantity
+      cartItem.quantity += quantity;
+    } else {
+      // Otherwise, add a new cart item with the given quantity
       _cart.add(
         CartItem(
-            food: food,
-            selectedAddons: selectedAddons,
-            quantity: cartItem!.quantity),
+          food: food,
+          selectedAddons: selectedAddons,
+          quantity: quantity, // Use the passed quantity, not cartItem!.quantity
+        ),
       );
     }
-    notifyListeners();
+
+    notifyListeners(); // Update UI
   }
+
+
 
 //remove from cart
   void removeFromCart(CartItem cartItem) {
