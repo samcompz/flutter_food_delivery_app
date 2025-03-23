@@ -8,10 +8,10 @@ class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
-  _RegisterScreenState createState() => _RegisterScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();  //private
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates private
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
@@ -23,7 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: const Text('Register'),
       ),
@@ -58,7 +58,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 10,
             ),
 
-            //password textfield
+            //password text field
             MyTextField(
               controller: passwordController, //capture password
               hintText: "Password",
@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
             const SizedBox(height: 10),
 
-            //confirm password textfield
+            //confirm password text field
             MyTextField(
               controller: confirmPasswordController, //capture password
               hintText: "confirm Password",

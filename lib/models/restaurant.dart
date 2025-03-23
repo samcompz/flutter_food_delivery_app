@@ -497,8 +497,6 @@ O P E R A T I O N S
     notifyListeners(); // Update UI
   }
 
-
-
 //remove from cart
   void removeFromCart(CartItem cartItem) {
     int cartIndex = _cart.indexOf(

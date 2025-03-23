@@ -27,7 +27,7 @@ class _LoginOrRegisterState extends State<LoginOrRegister>{
     if(showLoginPage){
       return const LoginScreen();
     }else{
-      return RegisterScreen();
+      return const RegisterScreen();
     }
   }
 }
