@@ -1,26 +1,33 @@
 import 'package:flutter/material.dart';
 
 class MyCurrentLocation extends StatelessWidget {
-  const MyCurrentLocation({super.key});
+  MyCurrentLocation({super.key});
+  final textController = TextEditingController();
+
 
   void openLocationSearchBox(BuildContext context) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text("Your Location"),
-        content: const TextField(
-          decoration: InputDecoration(hintText: "search address"),
+        content: TextField(
+          controller: textController,
+          decoration: const InputDecoration(hintText: "search address"),
         ),
         actions: [
           //cancel
           MaterialButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.pop(context);
+              textController.clear();
+            },
             child: const Text("Cancel"),
           ),
 
           //save
           MaterialButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () { Navigator.pop(context);
+              textController.clear();},
             child: const Text("Save"),
           )
         ],

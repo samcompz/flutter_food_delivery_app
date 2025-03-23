@@ -1,27 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
+import 'package:food_delivery_app/screens/register.dart';
+import 'package:food_delivery_app/services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'home_page.dart';
 
 class LoginScreen extends StatefulWidget {
+  // final void Function()? onTap;
   const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
+
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  //text editing controllers
+  final  emailController = TextEditingController();
+  final  passwordController = TextEditingController();
 
   //login method
-  void logIn() {
-    /*
-     Authentification
-    */
+  void logIn() async {
+    //get instance of auth service
+    final authService = AuthService();
+    //try sign in
+    try {
+      await authService.signInWithEmailPassword(
+        emailController.text,
+        passwordController.text,
+      );
+    }
+
+    //display any errors
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ),
+      );
+    }
 
     //navigate to home page
     Navigator.push(
@@ -34,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final authProvider = Provider.of<AuthProvider>(context);
+    // final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
@@ -83,14 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             MyButton(
               text: "Sign In",
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ),
-                );
-              },
+              onTap: logIn,
             ),
 
             const SizedBox(height: 25),
@@ -108,7 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: 4,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Register now",
                     style: TextStyle(

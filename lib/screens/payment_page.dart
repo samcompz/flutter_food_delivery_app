@@ -11,7 +11,7 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   String cardNumber = '';
 
@@ -45,7 +45,7 @@ class _PaymentPageState extends State<PaymentPage> {
             // cancel button
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("Can"),
+              child: const Text("Cancel"),
             ),
 
             //yes button
@@ -54,7 +54,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DeliveryProgressPage())),
-              child: const Text("Can"),
+              child: const Text("Proceed?"),
             ),
           ],
         ),
@@ -106,6 +106,8 @@ class _PaymentPageState extends State<PaymentPage> {
             text: "Pay Now",
             onTap: userTappedPay(),
           ),
+
+          const SizedBox(height: 25),
         ],
       ),
     );

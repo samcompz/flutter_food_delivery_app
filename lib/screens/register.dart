@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_button.dart';
+import 'package:food_delivery_app/screens/login_page.dart';
+import 'package:food_delivery_app/services/auth/auth_service.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
 import 'package:food_delivery_app/components/my_textfield.dart';
@@ -8,14 +10,58 @@ class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
-  _RegisterScreenState createState() => _RegisterScreenState();  //private
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates private
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
+class _RegisterScreenState extends State<RegisterScreen> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+  
+  //register method
+  void register() async {
+    //get the auth service
+    final _authService = AuthService();
+
+
+    //check if passwords match -> create user
+    if(passwordController.text == confirmPasswordController.text){
+      //try creating user
+      try{
+        await _authService.signUpWithEmailPassword(emailController.text, passwordController.text,);
+      }
+
+      //display any error
+      catch (e){
+        showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              backgroundColor: Theme.of(context).colorScheme.surface,
+              title: Text(e.toString()),
+            )
+        );
+      }
+    }
+
+    //if passwords dont match -> show error
+    else{
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            title: const Text("Passwords don't match"),
+          )
+      );
+    }
+
+    showDialog(
+        context: context, 
+        builder: (context) => AlertDialog(
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          title: const Text("User wants to Register"),
+        )
+    );
+  }
 
   //build
   @override
@@ -58,7 +104,7 @@ class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates privat
               height: 10,
             ),
 
-            //password text field
+            //password Text Field
             MyTextField(
               controller: passwordController, //capture password
               hintText: "Password",
@@ -67,7 +113,7 @@ class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates privat
 
             const SizedBox(height: 10),
 
-            //confirm password text field
+            //confirm password Text Field
             MyTextField(
               controller: confirmPasswordController, //capture password
               hintText: "confirm Password",
@@ -79,9 +125,9 @@ class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates privat
             //Register button
             MyButton(
               text: "Register",
-              onTap: () {
+              onTap: register
                 // sign in
-              },
+
             ),
 
             const SizedBox(height: 25),
@@ -99,7 +145,12 @@ class _RegisterScreenState extends State<RegisterScreen> {  //_ indicates privat
                   width: 4,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen())
+                    );
+                  },
                   child: Text(
                     "Log In",
                     style: TextStyle(
